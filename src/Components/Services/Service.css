@@ -1,0 +1,21 @@
+/*  card dedsign  */
+.card-style{
+    background-color: #faebd7;
+    width: 650px;
+    box-shadow: 10px 5px 5px gray;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+
+}
+/* card animation  */
+.details-card:hover{
+    /* transform: scale(1.05); */
+  
+    border: 3px solid rgb(252, 208, 11);
+}
+/*  name design  */
+.card-value{
+    color: orangered;
+    font-weight: bold;
+    font-size: 25px;
+}

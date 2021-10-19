@@ -1,0 +1,21 @@
+/* google font for brand name  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.banner-brand {
+        font-family: 'Roboto', sans-serif;
+        color:rgb(15, 38, 139);
+        font-size: 30px;
+        font-weight: 700;
+}
+
+
+.banner{
+    width: 100%;
+}
+
+.gallery-container{
+    background-color: antiquewhite;
+}
+

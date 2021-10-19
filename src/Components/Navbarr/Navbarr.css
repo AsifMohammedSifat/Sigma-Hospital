@@ -1,0 +1,13 @@
+/* google font for brand name  */
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+.brand-name{
+        font-family: 'Rampart One', cursive;
+        color:yellow;
+        font-size: 30px;
+}
+.nav-item-text{
+    color: white!important;
+}
+.nav-item-text:hover{
+    color: yellow!important;
+}
