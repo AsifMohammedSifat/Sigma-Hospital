@@ -20,7 +20,8 @@ ___
 * `css`
 * `JavaScript`
 * `ReactJS`
-*`React-Bootstrap`
+*`Bootstrap`
+*`Firebase`
 ---
 ###### All Right Reserved by [Asif Mohammed Sifat](https://www.facebook.com/asif.engrr)
 

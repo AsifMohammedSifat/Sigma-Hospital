@@ -11,3 +11,10 @@
 .nav-item-text:hover{
     color: yellow!important;
 }
+
+/* media query */
+@media screen and (min-width: 200px) and (max-width:575) {
+   .brand-name{
+       font-size: 16px;
+   }
+}

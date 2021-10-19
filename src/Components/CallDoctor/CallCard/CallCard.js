@@ -1,11 +1,11 @@
 import React from 'react';
-import './Doctor.css'
+import './CallCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
 
 
-const Doctor = (props) => {
-    const phoneIcon = <FontAwesomeIcon icon={faPhone} />
+const CallCard = (props) => {
+    const phoneIcon = <FontAwesomeIcon icon={faPhoneAlt} />
   
     const {name,type,age,country,salary,img}=props.doctor;//destructing of object
     return (
@@ -30,6 +30,9 @@ const Doctor = (props) => {
                             <p className="fw-bold">Salary: {salary}$</p>
 
                         </div>
+                        <div className="card-footer">
+                            <button className="bg-warning text-white fw-bold border-0 btn btn-outline-warning rounded-3">{phoneIcon} Call Now</button>
+                        </div>
                 
                     </div>
             </div>
@@ -39,4 +42,4 @@ const Doctor = (props) => {
     );
 };
 
-export default Doctor;
+export default CallCard;

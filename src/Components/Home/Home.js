@@ -6,7 +6,16 @@ import SingleService from '../Services/SingleService/SingleService';
 import Doctor from './Doctor/Doctor';
 import Gallery from './Gallery/Gallery';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faListOl,faImages,faUserMd } from '@fortawesome/free-solid-svg-icons'
+
+
 const Home = () => {
+    // fonst awesome icon 
+        const serviceIcon = <FontAwesomeIcon icon={faListOl} />
+        const imagesIcon = <FontAwesomeIcon icon={faImages} />
+        const doctorIcon = <FontAwesomeIcon icon={faUserMd} />
+
     // initialize state of services 
     const [services, setServices] =useState([{id:"",name:" ",description:" ",img:" "}]);
 
@@ -39,21 +48,20 @@ const Home = () => {
         <div>
 
             {/* ================banner slider==================  */}
-            <Carousel fade style={{marginTop: "70px"}} >       
+            <Carousel  fade className="carosel-div" style={{marginTop: "70px"}} >       
 
                 {/* item-1  */}
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    // src = "https://i.ibb.co/SwtTfTk/banner3.jpg"
                     src = "https://www.clarendonmedicalcentre.nhs.uk/wp-content/uploads/2016/09/banner_aae1.jpg"
                      alt="Third slide"
                     />
 
                    {/* banner caption  */}
                     <Carousel.Caption>
-                    <h3><span className="banner-brand fw-bold fs-1">World Best Docotors</span></h3>
-                    <p className="text-warning fw-bold text-dark fs-5">We hire best doctor for  our medical service.We provide a range of specialised  health services for people of all ages in our community.</p>
+                    <h3><span className="banner-head banner-brand fw-bold ">World Best Docotors</span></h3>
+                    <p  className="banner-p text-warning fw-bold text-dark">We hire best doctor for  our medical service.We provide a range of specialised  health services for people of all ages in our community.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -66,8 +74,8 @@ const Home = () => {
                     
                     {/* caption-2  */}
                     <Carousel.Caption>
-                    <h3><span className="banner-brand text-primary fw-bold fs-1">Medical Service</span></h3>
-                    <p className="banner-text fs-5 text-dark fw-bold">We have the most comprehensive medical services in the state, with expert care covering a wide range of illnesses plus emergency and elective surgery, ensuring our community receives the care they need</p>
+                    <h3><span className="banner-head banner-brand text-primary fw-bold">Medical Service</span></h3>
+                    <p className="banner-p banner-text text-dark fw-bold">We have the most comprehensive medical services in the state, with expert care covering a wide range of illnesses plus emergency and elective surgery, ensuring our community receives the care they need</p>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -81,8 +89,8 @@ const Home = () => {
 
                     {/* caption-3                      */}
                     <Carousel.Caption>
-                    < h3 > <span className = "banner-brand fw-bold fs-1" > Specialised support services</span></h3>
-                    <p className = "text-dark fw-bold fs-5" > Your care will be multi disciplinary to ensure you can
+                    <h3> <span className = "banner-head banner-brand fw-bold" > Specialised support services</span></h3>
+                    <p className = "banner-p text-dark fw-bold" > Your care will be multi disciplinary to ensure you can
                     return to your daily activities as soon as possible.
                     We run a range of outpatient and community clinics to help people when they leave hospital.</p>
                     </Carousel.Caption>
@@ -93,7 +101,7 @@ const Home = () => {
             {/* banner end  */}
 
             {/*============================= services start ============================ */}
-            <h1 className="bg-warning  text-white fs-1  fw-bold w-50 m-auto rounded-3 mt-5 ">Services</h1>
+            <h1 className="bg-warning  text-white fs-1  fw-bold w-50 m-auto rounded-3 mt-5 ">{serviceIcon} Services</h1>
 
              {/* home->service section card container grid */}
             <div className= " row row-cols-1 row-cols-md-2 g-4 container m-auto" >
@@ -110,7 +118,7 @@ const Home = () => {
             {/* service end  */}
 
             {/*============================= our doctors start============================  */}
-             <h1 className="text-white fw-bold my-5 w-50 m-auto rounded-3 mt-5 bg-warning">Our Doctors</h1>
+             <h1 className="text-white fw-bold my-5 w-50 m-auto rounded-3 mt-5 bg-warning">{doctorIcon} Our Doctors</h1>
 
              {/* grid system for doctors  */}
               <div className= " row row-cols-1 row-cols-md-3 g-2 container m-auto" >
@@ -126,9 +134,9 @@ const Home = () => {
 
             {/* ================================our gallery start======================== */}
 
-             <h1 className="text-white fw-bold my-5 w-50 m-auto rounded-3 mt-5 bg-warning">Our Gallery</h1>
+             <h1 className="text-white fw-bold my-5 w-50 m-auto rounded-3 mt-5 bg-warning">{imagesIcon} Our Gallery</h1>
               {/* grid system for gallery  */}
-              <div className= "row gallery-container row-cols-1 row-cols-md-3 g-2 container m-auto" >
+              <div className= "row gallery-container row-cols-1 row-cols-md-2 g-2 container m-auto" >
                    {
                         
                         images.map(image => <Gallery

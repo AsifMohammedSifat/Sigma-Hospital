@@ -6,7 +6,7 @@ import './Navbarr.css';
 const Navbarr = () => {
     return (
          <div>
-            <Navbar collapseOnSelect fixed="top" expand = "lg" bg="dark" variant="dark">
+            <Navbar  collapseOnSelect fixed="top" expand = "lg" bg="dark" variant="dark">
                     <Container fluid>
                         {/* brand name  */}
                         <Navbar.Brand href="/home"><span className="brand-name  ">SigmaHospital</span></Navbar.Brand>
@@ -15,11 +15,11 @@ const Navbarr = () => {
 
                             {/* navbar menu item  */}
                         <Nav className="nav-menu-container mx-auto fs-4" >
-                            <Nav.Link as={Link} className="nav-item-text" to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} className="nav-item-text" to="/services">Services</Nav.Link>
-                            <Nav.Link as={Link} className="nav-item-text" to="/healthtips">Health Tips</Nav.Link>
-                            <Nav.Link as={Link} className="nav-item-text" to="/shop">Shop</Nav.Link>
-                            <Nav.Link as={Link} className="nav-item-text" to="/aboutus">About Us</Nav.Link>
+                            <Nav.Link as={Link} className="fs-5 nav-item-text" to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} className="fs-5 nav-item-text" to="/services">Services</Nav.Link>
+                            <Nav.Link as={Link} className="fs-5 nav-item-text" to="/healthtips">Health Tips</Nav.Link>
+                            <Nav.Link as={Link} className="fs-5 nav-item-text" to="/calldoctor">Call Doctor</Nav.Link>
+                            <Nav.Link as={Link} className="fs-5 nav-item-text" to="/aboutus">About Us</Nav.Link>
                         </Nav>
                         <Form className="d-flex ms-auto">
                             <FormControl

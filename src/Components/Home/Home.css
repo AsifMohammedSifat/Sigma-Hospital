@@ -10,12 +10,29 @@
         font-weight: 700;
 }
 
-
+/* banner width  */
 .banner{
     width: 100%;
 }
-
+/* banner head text  */
+.banner-head{
+    font-size: 25px;
+}
+/* banner-descriptiton  */
+.banner-p{
+    font-size: 18px;
+}
 .gallery-container{
     background-color: antiquewhite;
 }
 
+/* On screens that are 600px or less*/
+@media screen and (max-width: 776px) {
+    .banner-head{
+        font-size: 16px;
+    }
+   .banner-p{
+       font-size: 12px;
+
+   }
+}

@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SingleService.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+
 
 const SingleService = (props) => {
-    const {name,description,img}=props.service;
+    const {id,name,description,img}=props.service;
+    // fonntawwesome icon 
+    const infoIcon = <FontAwesomeIcon icon={faInfoCircle} />
+  
    
     return (
        <div>
@@ -21,7 +27,10 @@ const SingleService = (props) => {
 
                 {/* details button of card  */}
                 <div className="card-footer">
-                    <Link to="/description" className="btn btn-warning text-white fw-bold">Details</Link>
+                    <Link to={`/details/${id}`} >
+                        <button className="btn btn-warning text-white fw-bold">{infoIcon}  Details
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
