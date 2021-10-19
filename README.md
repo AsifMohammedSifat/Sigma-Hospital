@@ -1,4 +1,4 @@
-## ProCoders-Academy
+## Sigma Hospital
 ***
 Here provided project link [Sigma Hospital](https://sigma-hospital.netlify.app/).
 ___
