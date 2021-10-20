@@ -31,6 +31,7 @@ const Home = () => {
         .then(res=>res.json())
         .then(data=>setServices(data.slice(0,6)));
     },[])
+    
     //  fetcth data doctors
     useEffect(()=>{
         fetch('./doctors.json')

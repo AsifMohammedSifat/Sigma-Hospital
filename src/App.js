@@ -9,12 +9,15 @@ import HealthTips from './Components/HealthTips/HealthTips';
 import Footer from './Components/Footer/Footer';
 import Details from './Components/Details/Details';
 import CallDoctor from './Components/CallDoctor/CallDoctor';
-
+import AuthProvider from './Context/AuthProvider';
+import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div className="App">
-      <Router>
+     <AuthProvider>
+        <Router>
         <Navbarr></Navbarr>
         <Switch>
           <Route path="/home">
@@ -31,17 +34,23 @@ function App() {
           </Route>
 
           {/* health tips  */}
-          <Route path="/healthtips">
+          <PrivateRoute path="/healthtips">
             <HealthTips></HealthTips>
-          </Route>
+          </PrivateRoute>
 
           {/* details  */}
-          <Route path="/calldoctor">
+          <PrivateRoute path="/calldoctor">
             <CallDoctor></CallDoctor>           
-          </Route>
-          <Route  path="/details/:detailsId">
+          </PrivateRoute>
+          <PrivateRoute  path="/details/:detailsId">
             <Details></Details>
             
+          </PrivateRoute>
+
+          {/* log in  */}
+          <Route path="/login">
+            <Login></Login>
+
           </Route>
 
           {/* by default  */}
@@ -61,6 +70,7 @@ function App() {
       </Router>
 
      
+     </AuthProvider>
     </div>
   );
 }
